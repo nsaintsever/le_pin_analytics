@@ -92,7 +92,7 @@ for vin_clean in df['vin_clean'].dropna().unique():
         continue
 
     # 4) votre critère « nicest_name »
-    nicest_name = max(
+    nicest_name = min(
         associated_vins,
         key=lambda x: (x.count(','), len(x))
     )
